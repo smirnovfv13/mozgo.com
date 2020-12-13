@@ -12,7 +12,7 @@ HOST_NAME = "api.base.mozgo.com"
 EVENT_TIMES = [
     {
         "reg": "2020-12-04T12:00:00",
-        "played_at": "2020-12-07T19:00:00"
+        "played_at": "2020-12-15T19:00:00"
     }
 
 ]
@@ -21,7 +21,7 @@ AUTHORIZATION_HEADER = '''Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjV
 REG_TIMEOUT = 5 #seconds
 
 SILENT_SECONDS = 3600*3 #number of seconds for keeping API without POSTS
-REG_FALSESTART = 0.400 #number of milliseconds to start reg before actual
+REG_FALSESTART = 0.450 #number of milliseconds to start reg before actual
 
 
 # конвертер текстовой даты в seconds since epoch
@@ -48,8 +48,8 @@ class MozgoComConnection:
         self._conn = http.client.HTTPSConnection(HOST_NAME)
         self._USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52"
         self._headers = {
-            ":authority": "api.base.mozgo.com",
-            ":scheme":"https",
+            # ":authority": "api.base.mozgo.com",
+            # ":scheme":"https",
             # как ни странно, но с этим заголовком API не работает!
             # "accept-encoding": "gzip, deflate, br",
             "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
@@ -111,7 +111,7 @@ class MozgoComConnection:
         # заголовки для POST значительно отличаются от штатных
         headers = {
             "Accept": "application/json, text/plain, */*",
-            # "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
             "Authorization": AUTHORIZATION_HEADER,
             "Connection": "keep-alive",
