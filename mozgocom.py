@@ -11,21 +11,36 @@ import copy
 HOST_NAME = "api.base.mozgo.com"
 EVENT_TIMES = [
     {
-        "reg": "2020-02-27T12:00:00",
-        "played_at":"2020-03-02T19:00:00"
-    },
-    # {
-    #     "reg": "2020-02-25T20:58:00",
-    #     "played_at":"2020-03-10T19:00:00"
-    # }
+        "reg": "2020-12-04T12:00:00",
+        "played_at": "2020-12-07T19:00:00"
+    }
+
 ]
-AUTHORIZATION_HEADER = '''Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImM1MjU5MDAzYWUzMjkwZGY4YWFiZjc3ZjI3MGI2NThmZTI0ZWJlYzNjMjk0ODcxNDg1MDY4ODc0MTE4ZjE2MzRiMmE2ODY1ZDMzODUzY2FmIn0.eyJhdWQiOiIxIiwianRpIjoiYzUyNTkwMDNhZTMyOTBkZjhhYWJmNzdmMjcwYjY1OGZlMjRlYmVjM2MyOTQ4NzE0ODUwNjg4NzQxMThmMTYzNGIyYTY4NjVkMzM4NTNjYWYiLCJpYXQiOjE1Njg4MjcxNDMsIm5iZiI6MTU2ODgyNzE0MywiZXhwIjoxNjAwNDQ5NTQzLCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.FdhH-Aju73z_ppe35GFBi8mkC9ojzWBpp_v4Uv-VxmKLwjxBLu6w9QpcbwU7dWMQM6MgS7xDZ4vaDDXnbnBKOhuD1xXVEhKx_JpRj6oRiwNYQJWlJGxeXi6PJ1Yef59eBxQwYi5G0xIC8u0Sr4o4UCejJU4kh__QBO6AtNqWBC86KASAw5MR3Pufo3McQpjmEMM6Tr8CQaxiYD51PBd0UEhe66kHwZexWNhb6SsH_1dKU4pxr9QeHvQj8FMJj1arezQ2GVXWQ3_3-xbwH5HZxAQPlvJhI00J9yIvvby_N411jPWe6Z3SZkjMSUWBlqcuMT03cMOGiQH39m5KAOtfEfHL9jlzMQEnfcXYLRTfFre2Ua6aenGqqnbFhwuWi49EjEY-LcGQN45kQM7aXYA5BCQkj-4bvigzRUNw7279NzzjjjXgznwYw4T0NRr5wahJmr8vDq2sM5rVSiT8NUsj4LFimV-Mlb-NahtcnnWkyLDPyLkvYFfGql8K26WFSag8_ZqN_Yd71M0lW7yVG5rwJFAMdhQcuIAZcIyike51fv00r4GpcngW7nSo8_dcCL5XDqF4iws-WJ_SV1o1fYx1AT6PaaLyXqUdxR9ALkNC9m-sWgvl9UTg82AE47Hv3UglPzePG7ufszCaJCGtYW2i5W1jupAj1itbM7Fdrz6XmFw'''
+AUTHORIZATION_HEADER = '''Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg'''
+
+REG_TIMEOUT = 5 #seconds
+
+SILENT_SECONDS = 3600*3 #number of seconds for keeping API without POSTS
+REG_FALSESTART = 0.400 #number of milliseconds to start reg before actual
+
 
 # конвертер текстовой даты в seconds since epoch
 def abstime(timetext):
     timeobj = time.strptime(timetext, "%Y-%m-%dT%H:%M:%S")
     return time.mktime(timeobj)
 
+def log_time_delta(text, perfcntr_started):
+    delta_secs = time.perf_counter() - perfcntr_started
+    delta_msecs = int(round(delta_secs * 1000))
+    print("[TIME] {0} {1}".format(text, delta_msecs))
+
+# исключение регистрации
+class RegisterException(Exception):
+    def __init__(self, message, status, reason, response):
+        super(RegisterException, self).__init__(message)
+        self.status = status
+        self.reason = reason
+        self.response = response
 
 # класс для исполнения запросов
 class MozgoComConnection:
@@ -49,6 +64,12 @@ class MozgoComConnection:
             headers.update(headers_override)
         return headers
 
+    def _printHeaders(self, formattedStr, headers):
+        print(formattedStr)
+        print("HEADERS")
+        for k, v in headers.items():
+            print("{} = {}".format(k, v))
+
     # OPTIONS request. Looks like its obligatory for successful GET.
     def requestOptions(self, url, headers_override = None):
         headers = self._patchedHeaders(headers_override)
@@ -57,6 +78,7 @@ class MozgoComConnection:
             "access-control-request-headers": "authorization,x-user-time-offset",
             "access-control-request-method":"GET"
         })
+        self._printHeaders("OPTIONS REQUEST {}".format(url), headers)
         self._doRequest("OPTIONS", url, headers, False)
 
     # чтение и разбор HTTPResponse
@@ -64,10 +86,11 @@ class MozgoComConnection:
         response = conn.getresponse()
         answer = response.read()
         conn.close()
-        print(response.status, response.reason)
+        print("{} {}".format(response.status, response.reason))
+        print("RESPONSE HEADER {} ".format(str(response.headers)))
+        print("RESPONSE BODY {} ".format(str(answer)))
         if response.status >= 300:
-            raise Exception("{0} {1} {2}".format(response.status, response.reason, answer.decode()))
-        print(str(answer))
+            raise RegisterException("HTTP Error", response.status, response.reason, answer.decode)
         if parse_answer:
             answer_obj = json.loads(answer.decode())
             return answer_obj
@@ -82,7 +105,8 @@ class MozgoComConnection:
         return self._retrieveResponse(self._conn, parse_answer)
 
     # perform a POST request with mozgo.com API a headers
-    def requestPost(self, url, body, headers_override = None):
+    def requestPost(self, url, body, headers_override = None, perfcntr_started = 0):
+        log_time_delta("def requestPost entered", perfcntr_started)
         string_body = json.dumps(body)
         # заголовки для POST значительно отличаются от штатных
         headers = {
@@ -102,7 +126,16 @@ class MozgoComConnection:
             "X-User-Time-Offset": 10800
         }
 
-        self._conn.request("POST", url, string_body, headers=headers)
+        self._printHeaders("POST REQUEST {} ".format(url), headers)
+        log_time_delta("headers printed", perfcntr_started)
+        print("POST REQUEST BODY {} ".format(str(body)))
+        log_time_delta("body printed", perfcntr_started)
+        try:
+            self._conn.request("POST", url, string_body, headers=headers)
+            log_time_delta("POST sent", perfcntr_started)
+        except:
+            raise RegisterException("Register Exception Raised", -1, -1, "HTTPConnection request Error")
+        log_time_delta("before parsing response", perfcntr_started)
         return self._retrieveResponse(self._conn)
 
     # perform a GET request with mozgo.com API a headers
@@ -114,25 +147,28 @@ class MozgoComConnection:
             "x-user-time-offset": "10800",
             "authorization": AUTHORIZATION_HEADER
         })
+        self._printHeaders("GET REQUEST {}".format(url), headers)
         return self._doRequest("GET", url, headers)
-
 
 # класс события на которое регистрируемся
 class Event:
     def __init__(self, event_desc):
         self._auth_data = AUTHORIZATION_HEADER
         self._event_regdatetime = event_desc["reg"]
-        self._event_mkregtime = abstime(self._event_regdatetime)
+        # вычисляем старт регистрации, с фальстартом
+        self._event_mkregtime = abstime(self._event_regdatetime) - REG_FALSESTART
         self._played_at = event_desc["played_at"]
         self._played_at_response = None
         self._event_uuid = None
         self._team_id = None
         self._team_response = None
 
-    def getEventDateTimeText(self):
+    # registration date as text "reg": "Y-M-dTH:m:s",
+    def getEventRegDateTimeText(self):
         return self._event_regdatetime
 
-    def getEventMkTime(self):
+    # registration date since epoch
+    def getEventRegMkTime(self):
         return self._event_mkregtime
 
     def getPlayedAt(self):
@@ -148,6 +184,7 @@ class Event:
 
     # immediate registering for an event
     def register(self, conn):
+        process_started = time.perf_counter()
         if not self._team_response:
             raise Exception("No team data requested")
         request = {
@@ -162,10 +199,28 @@ class Event:
             "roistat_first_visit":"331370",
             "roistat_visit":"331370"
         }
-        # сайт делает почему-то два ПОСТ-запроса, визуально разницу не уловил...
-        answer1 = conn.requestPost("/players/applications", request)
-        answer2 = conn.requestPost("/players/applications", request)
-        print(answer2["registered_at"])
+
+        retry = True
+        cycle_started = time.time()
+        while retry:
+            try:
+                log_time_delta("before post", process_started)
+                answer = conn.requestPost("/players/applications", request, process_started)
+                log_time_delta("after post success", process_started)
+                retry = False
+                print(answer["registered_at"])
+            except RegisterException as rex:
+                log_time_delta("after post exception", process_started)
+                print("Exception caught HTTP Code {}".format(rex.reason))
+                retry = rex.status == 422 or rex.status == 0
+                if retry:
+                    # registration not available, retry after 50 ms
+                    print("retry after {} seconds".format(int(time.time() - cycle_started)))
+                    # time.sleep(0.001)
+                else:
+                    raise RegisterException("Register Exception Raised", rex.status, rex.reason, rex.response)
+            log_time_delta("after post cycle end", process_started)
+            retry = retry and ( (time.time() - cycle_started) <= REG_TIMEOUT )
 
 # задача шедулера - метод вывода текущего времени
 def job_print(name):
@@ -182,6 +237,7 @@ def job_register(name, event, conn):
     try:
         event.register(conn)
     except Exception as e:
+        job_print('register failed')
         print(e)
 
 # задача шедулера - метод проверки доступности сайта и подготовки к регистрации
@@ -196,7 +252,6 @@ def job_ping(name, event, conn):
     except Exception as e:
         print(e)
 
-
 if __name__ == '__main__':
     job_print("start")
 
@@ -207,18 +262,21 @@ if __name__ == '__main__':
     py_sched = sched.scheduler(time.time, time.sleep)
     for event_data in EVENT_TIMES:
         event = Event(event_data)
-        event_mkregtime = event.getEventMkTime()
+        event_mkregtime = event.getEventRegMkTime()
+        # проверяем Event
+        job_ping('checking event', event, conn)
         # добавляем пингующие события, чтобы нас не разлогинили
         ping_time = start_time
         ping = 0
-        while event_mkregtime - ping_time > 4:
+        while event_mkregtime - ping_time > SILENT_SECONDS:
             # пингуем в интервалы выбираемые дихотомией
-            ping_time = ping_time + (event_mkregtime - ping_time) / 2
+            ping_time = ping_time + 3600*3
             py_sched.enterabs(ping_time, 2, job_ping,
                               kwargs={"name": "ping {}".format(ping), "event": event, "conn" : conn})
             ping = ping + 1
             print("added ping {0} at {1}".format(ping, time.strftime("%H:%M:%S %d %b", time.localtime(ping_time))))
         # главное событие регистрации по конкретному времени
         py_sched.enterabs(event_mkregtime, 1, job_register,
-                          kwargs={"name": "ping {}".format(ping), "event": event, "conn" : conn})
+                          kwargs={"name": "registration {}".format(ping), "event": event, "conn" : conn})
+        print("added reg {0} at {1}".format(ping, time.strftime("%H:%M:%S %d %b", time.localtime(event_mkregtime))))
     py_sched.run()
