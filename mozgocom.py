@@ -108,10 +108,10 @@ class MozgoComConnection:
 
     # вспомогательный метод с общими заголовками для GET, OPTIONS
     def _doRequest(self, method, url, headers, parse_answer = True):
-        headers.update({
-            ":path": url,
-            ":method": method
-        })
+        # headers.update({
+        #     ":path": url,
+        #     ":method": method
+        # })
         self._conn.request(method, url, headers=headers)
         return self._retrieveResponse(self._conn, parse_answer)
 

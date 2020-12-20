@@ -34,7 +34,7 @@ def _collect_latency(conn, event, request_func):
     current_try = 1
     offset_found = False
     desync_stat = []
-    while (current_try < TRY_LIMIT) or not offset_found:
+    while (current_try < TRY_LIMIT):
         before_post_time = time.time() - 3600 * 3
         before_post_time_struct = time.gmtime(before_post_time)
         # make a query
@@ -52,6 +52,8 @@ def _collect_latency(conn, event, request_func):
         if desync < -1:
             desync_stat.append(-1 * (desync + 1))
         offset_found = len(desync_stat) > 20
+        if offset_found:
+            break
         current_try += 1
     return desync_stat
 
