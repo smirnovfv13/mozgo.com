@@ -11,8 +11,8 @@ import copy
 HOST_NAME = "api.base.mozgo.com"
 EVENT_TIMES = [
     {
-        "reg": "2020-12-04T12:00:00",
-        "played_at": "2020-12-15T19:00:00"
+        "reg": "2020-12-14T12:00:00",
+        "played_at": "2020-12-22T19:00:00"
     }
 
 ]
@@ -29,7 +29,9 @@ def abstime(timetext):
     timeobj = time.strptime(timetext, "%Y-%m-%dT%H:%M:%S")
     return time.mktime(timeobj)
 
-def log_time_delta(text, perfcntr_started):
+def log_time_delta(text, perfcntr_started, verbose = True):
+    if not verbose:
+        return
     delta_secs = time.perf_counter() - perfcntr_started
     delta_msecs = int(round(delta_secs * 1000))
     print("[TIME] {0} {1}".format(text, delta_msecs))
@@ -44,7 +46,7 @@ class RegisterException(Exception):
 
 # класс для исполнения запросов
 class MozgoComConnection:
-    def __init__(self):
+    def __init__(self, verbose = True):
         self._conn = http.client.HTTPSConnection(HOST_NAME)
         self._USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52"
         self._headers = {
@@ -56,6 +58,11 @@ class MozgoComConnection:
             "origin": "https://portal.mozgo.com",
             "user-agent": self._USER_AGENT
         }
+        self._last_response_headers = {}
+        self._verbose = verbose
+
+    def getResponseHeaders(self):
+        return self._last_response_headers
 
     # merging headers utility
     def _patchedHeaders(self, headers_override):
@@ -65,6 +72,8 @@ class MozgoComConnection:
         return headers
 
     def _printHeaders(self, formattedStr, headers):
+        if not self._verbose:
+            return
         print(formattedStr)
         print("HEADERS")
         for k, v in headers.items():
@@ -85,10 +94,12 @@ class MozgoComConnection:
     def _retrieveResponse(self, conn, parse_answer = True):
         response = conn.getresponse()
         answer = response.read()
+        self._last_response_headers = response.headers
         conn.close()
-        print("{} {}".format(response.status, response.reason))
-        print("RESPONSE HEADER {} ".format(str(response.headers)))
-        print("RESPONSE BODY {} ".format(str(answer)))
+        if self._verbose:
+            print("{} {}".format(response.status, response.reason))
+            print("RESPONSE HEADER {} ".format(str(self.getResponseHeaders())))
+            print("RESPONSE BODY {} ".format(str(answer)))
         if response.status >= 300:
             raise RegisterException("HTTP Error", response.status, response.reason, answer.decode)
         if parse_answer:
@@ -106,7 +117,7 @@ class MozgoComConnection:
 
     # perform a POST request with mozgo.com API a headers
     def requestPost(self, url, body, headers_override = None, perfcntr_started = 0):
-        log_time_delta("def requestPost entered", perfcntr_started)
+        log_time_delta("def requestPost entered", perfcntr_started, self._verbose)
         string_body = json.dumps(body)
         # заголовки для POST значительно отличаются от штатных
         headers = {
@@ -127,15 +138,16 @@ class MozgoComConnection:
         }
 
         self._printHeaders("POST REQUEST {} ".format(url), headers)
-        log_time_delta("headers printed", perfcntr_started)
-        print("POST REQUEST BODY {} ".format(str(body)))
-        log_time_delta("body printed", perfcntr_started)
+        if self._verbose:
+            log_time_delta("headers printed", perfcntr_started)
+            print("POST REQUEST BODY {} ".format(str(body)))
+            log_time_delta("body printed", perfcntr_started)
         try:
             self._conn.request("POST", url, string_body, headers=headers)
-            log_time_delta("POST sent", perfcntr_started)
+            log_time_delta("POST sent", perfcntr_started, self._verbose)
         except:
             raise RegisterException("Register Exception Raised", -1, -1, "HTTPConnection request Error")
-        log_time_delta("before parsing response", perfcntr_started)
+        log_time_delta("before parsing response", perfcntr_started, self._verbose)
         return self._retrieveResponse(self._conn)
 
     # perform a GET request with mozgo.com API a headers
@@ -174,6 +186,13 @@ class Event:
     def getPlayedAt(self):
         return self._played_at
 
+    def bindTeam(self, conn):
+        conn.requestOptions("/events/dates/123?sort=played_at")
+        answer = conn.requestGet("/events/dates/123?sort=played_at")
+        for answrd_evt in answer:
+            if answrd_evt["played_at"] == self.getPlayedAt():
+                self.update(answrd_evt, conn)
+
     # UPDATE event identifiers from mozgo.com API
     def update(self, played_at_response, conn):
         self._played_at_response = played_at_response
@@ -182,11 +201,7 @@ class Event:
         self._team_response = conn.requestGet("/players/me?city_id=123")
         self._team_id = self._team_response["teams"][0]["id"]
 
-    # immediate registering for an event
-    def register(self, conn):
-        process_started = time.perf_counter()
-        if not self._team_response:
-            raise Exception("No team data requested")
+    def makeRegisterBody(self):
         request = {
             "event_day_id": self._event_uuid,
             "team_id": self._team_id,
@@ -199,6 +214,14 @@ class Event:
             "roistat_first_visit":"331370",
             "roistat_visit":"331370"
         }
+        return request
+
+    # immediate registering for an event
+    def register(self, conn):
+        process_started = time.perf_counter()
+        if not self._team_response:
+            raise Exception("No team data requested")
+        request = self.makeRegisterBody()
 
         retry = True
         cycle_started = time.time()
@@ -244,11 +267,7 @@ def job_register(name, event, conn):
 def job_ping(name, event, conn):
     job_print(name)
     try:
-        conn.requestOptions("/events/dates/123?sort=played_at")
-        answer = conn.requestGet("/events/dates/123?sort=played_at")
-        for answrd_evt in answer:
-            if answrd_evt["played_at"] == event.getPlayedAt():
-                event.update(answrd_evt, conn)
+        event.bindTeam(conn)
     except Exception as e:
         print(e)
 
