@@ -11,17 +11,16 @@ import copy
 HOST_NAME = "api.base.mozgo.com"
 EVENT_TIMES = [
     {
-        "reg": "2020-12-14T12:00:00",
-        "played_at": "2020-12-22T19:00:00"
+        "reg": "2021-05-14T12:00:00",
+        "played_at": "2021-05-18T19:00:00"
     }
-
 ]
 AUTHORIZATION_HEADER = '''Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg'''
 
 REG_TIMEOUT = 5 #seconds
 
 SILENT_SECONDS = 3600*3 #number of seconds for keeping API without POSTS
-REG_FALSESTART = 0.450 #number of milliseconds to start reg before actual
+REG_FALSESTART = -0.001 #number of milliseconds to start reg before actual
 
 
 # конвертер текстовой даты в seconds since epoch

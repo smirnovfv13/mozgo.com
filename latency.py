@@ -29,6 +29,7 @@ def _ping(name, conn, f):
     except Exception as e:
         print('ping failed')
         print(e)
+        return None
 
 def _collect_latency(conn, event, request_func):
     current_try = 1
@@ -39,21 +40,22 @@ def _collect_latency(conn, event, request_func):
         before_post_time_struct = time.gmtime(before_post_time)
         # make a query
         server_time_struct = request_func("{} try".format(current_try), conn, event)
-        server_time = time.mktime(server_time_struct)
-        after_post_time = time.time() - 3600 * 3
-        desync = server_time - before_post_time
-        print('before {} server {} after {} latency {} desync {}'.format(
-            before_post_time,
-            server_time,
-            after_post_time,
-            round(1000 * (after_post_time - before_post_time)),
-            desync
-        ))
-        if desync < -1:
-            desync_stat.append(-1 * (desync + 1))
-        offset_found = len(desync_stat) > 20
-        if offset_found:
-            break
+        if server_time_struct:
+            server_time = time.mktime(server_time_struct)
+            after_post_time = time.time() - 3600 * 3
+            desync = server_time - before_post_time
+            print('before {} server {} after {} latency {} desync {}'.format(
+                before_post_time,
+                server_time,
+                after_post_time,
+                round(1000 * (after_post_time - before_post_time)),
+                desync
+            ))
+            if desync < -1:
+                desync_stat.append(-1 * (desync + 1))
+            offset_found = len(desync_stat) > 20
+            if offset_found:
+                break
         current_try += 1
     return desync_stat
 
@@ -61,10 +63,12 @@ if __name__ == '__main__':
     print("start")
 
     conn = MozgoComConnection(verbose=False)
-    event = Event({
-        "reg": "2020-12-14T12:00:00",
-        "played_at": "2020-12-22T19:00:00"
-    })
+    event = Event(
+    {
+        "reg": "2021-01-28T12:00:00",
+        "played_at": "2021-02-02T19:00:00"
+    }
+    )
     event.bindTeam(conn)
 
     dssg = _collect_latency(conn, event, _ping_get)
