@@ -1,0 +1,325 @@
+C:\Python33\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2018.1.4\helpers\pydev\pydevd.py" --multiproc --qt-support=auto --client 127.0.0.1 --port 63887 --file D:/Arbeit/mozgo.com/mozgocom.py
+pydev debugger: process 36108 is connecting
+
+Connected to pydev debugger (build 181.5087.37)
+job start entered at 11:19:43.98 14 Dec
+job checking event entered at 11:19:43.446 14 Dec
+OPTIONS REQUEST /events/dates/123?sort=played_at
+HEADERS
+user-agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+access-control-request-headers = authorization,x-user-time-offset
+accept-language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+accept = */*
+access-control-request-method = GET
+origin = https://portal.mozgo.com
+204 No Content
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:19:43 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, PATCH, DELETE
+Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Authorization, X-Requested-With, X-User-Time-Offset, X-Compress
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 86400
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'' 
+GET REQUEST /events/dates/123?sort=played_at
+HEADERS
+x-user-time-offset = 10800
+user-agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+referer = https://portal.mozgo.com/?
+authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg
+accept-language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+accept = application/json, text/plain, */*
+origin = https://portal.mozgo.com
+200 OK
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:19:43 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma
+Set-Cookie: mozgo_session=eyJpdiI6IjRXS01DTzZ2SGU4SVZFN3M2S2I2NUE9PSIsInZhbHVlIjoiWUxqc2hTTjlJenVjMzhSTVBOcXZpTXJuaENCVlhUa0tOR1FzTzlvQlowOE9MWUZiczY1YUZpVmwyWVRBbzlLVyIsIm1hYyI6IjdhYTJmNTRkNjhlZDM5YWE1ODBhNGE4M2I4MGJhZTA0ODZmNTBkYWJlZGMxNzJjYTA1ZmJhMzMxY2ZjNWQ4YmMifQ%3D%3D; expires=Mon, 14-Dec-2020 10:19:43 GMT; Max-Age=7200; path=/; httponly
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'[{"uuid":"868a6cf7-2988-498b-8c35-5a68ca478093","event_record_id":"74828509-e1f1-415c-80ef-02c95ac6d6f2","place":"\\u0421\\u0432\\u043e\\u0438 \\u0434\\u0430 \\u041d\\u0430\\u0448\\u0438","address":"\\u0443\\u043b.\\u0421\\u0432\\u043e\\u0431\\u043e\\u0434\\u044b, 34\\u0412","type":null,"time":"19:00","price":30000,"registration_at":"2020-12-07T12:00:00","played_at":"2020-12-15T19:00:00","game_type":"\\u0422\\u0443\\u0446 \\u0422\\u0443\\u0446 Quiz","parent_type":"\\u0414\\u043e\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u044b","game_topic":"\\u0422\\u0443\\u0446 \\u0422\\u0443\\u0446 Quiz #1","taken_type":"team","taken_team":14,"team_capacity":36,"taken_people":null,"people_capacity":null,"max_team_players":10,"status":"created","is_full":false,"is_filled":false,"media_banner":{"head":"https:\\/\\/mozgo-qiuz-materials.s3.amazonaws.com\\/104134\\/obloj_tuc_quiz.jpg"},"media_results":[],"is_created_by_editor":false,"currency":"RUB","is_registration_opened":true,"is_privileged_registration_opened":true,"team_ids_with_privileged_registration":[152,338,808,5350,7029,7078,7150,10550,18882,9242,6640,19827,21747,19824,22290,16786,7137,28031,29522,28033],"works_with_privileged":true,"team_ids_with_champion_registration":[],"works_with_champion":false,"works_with_results":false,"results_filled":false,"gameId":null},{"uuid":"27036109-bb45-4ac6-8cea-c9eacbdafa17","event_record_id":"1043cd5c-5de5-401f-859d-415084f11bc1","place":"\\u0421\\u0432\\u043e\\u0438 \\u0434\\u0430 \\u041d\\u0430\\u0448\\u0438","address":"\\u0443\\u043b.\\u0421\\u0432\\u043e\\u0431\\u043e\\u0434\\u044b, 34\\u0412","type":"19+ Live","time":"19:00","price":30000,"registration_at":"2020-12-14T12:00:00","played_at":"2020-12-22T19:00:00","game_type":"\\u0422\\u0435\\u043c\\u0430\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0430\\u044f","parent_type":null,"game_topic":"19+ ","taken_type":"team","taken_team":0,"team_capacity":36,"taken_people":null,"people_capacity":null,"max_team_players":10,"status":"created","is_full":false,"is_filled":false,"media_banner":{"head":"https:\\/\\/mozgo-qiuz-materials.s3.amazonaws.com\\/104044\\/obloj19.jpg"},"media_results":[],"is_created_by_editor":false,"currency":"RUB","is_registration_opened":false,"is_privileged_registration_opened":true,"team_ids_with_privileged_registration":[],"works_with_privileged":false,"team_ids_with_champion_registration":[],"works_with_champion":false,"works_with_results":false,"results_filled":false,"gameId":"4f674977-d221-4534-a171-c94135acfdef"}]' 
+OPTIONS REQUEST /players/me?city_id=123
+HEADERS
+user-agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+access-control-request-headers = authorization,x-user-time-offset
+accept-language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+accept = */*
+access-control-request-method = GET
+origin = https://portal.mozgo.com
+204 No Content
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:19:43 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, PATCH, DELETE
+Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Authorization, X-Requested-With, X-User-Time-Offset, X-Compress
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 86400
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'' 
+GET REQUEST /players/me?city_id=123
+HEADERS
+x-user-time-offset = 10800
+user-agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+referer = https://portal.mozgo.com/?
+authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg
+accept-language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+accept = application/json, text/plain, */*
+origin = https://portal.mozgo.com
+200 OK
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:19:43 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 999
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma
+Set-Cookie: mozgo_session=eyJpdiI6InIrQVlvRG1mTmk0WUVKUzdNclpEYXc9PSIsInZhbHVlIjoiZUFvM3JkNVlvRFc4eTF2c1o0cWtxTnZMK2FCWjNWQmlLaUFIdFUyazFrTHprV09LZGd2XC9UYVo0dTBaOUhRWjEiLCJtYWMiOiJmOWZmZmY0NzUxYzJiYTczNjUxMGZlNzQ2ZGY0ZTM5YzRmOTZlMDY2N2JkZDQ0ZDk0NGE4OTU4YzAzODI3NGUzIn0%3D; expires=Mon, 14-Dec-2020 10:19:43 GMT; Max-Age=7200; path=/; httponly
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'{"id":1289,"name":"Fedor Smirnov","email":"ahtirf@mail.ru","phone":"+79066320069","created_at":"2019-09-17 06:29:27","updated_at":"2020-04-03 08:52:46","role":"player","is_manager":false,"is_approved":false,"avatar_url":null,"applications":[{"id":116119,"games_event_day_id":"868a6cf7-2988-498b-8c35-5a68ca478093","games_event_record_id":"74828509-e1f1-415c-80ef-02c95ac6d6f2","team_id":1006,"status":"active","player_count":6}],"teams":[{"id":1006,"name":"Soviet Champagne","city_id":123,"city":"\\u042f\\u0440\\u043e\\u0441\\u043b\\u0430\\u0432\\u043b\\u044c","status":"\\u0410\\u043a\\u0442\\u0438\\u0432\\u043d\\u0430\\u044f","captain":{"id":1289,"name":"Fedor Smirnov","email":"ahtirf@mail.ru","created_at":"2019-09-17 06:29:27+0000","updated_at":"2020-04-03 08:52:46+0000","role":"player","is_manager":false,"phone":"+79066320069","email_verified_at":"2019-09-17 09:30:02+00","is_approved":false,"roistat":null,"roistat_first":null,"deleted_at":null,"social_networks":[],"is_punished":false,"city_id":123,"is_city_id_computed_by_team":true,"documents":[],"approved_at":null},"created_at":"2019-09-18T20:19:50","updated_at":"2020-12-03T21:33:15","deleted_at":null,"play_count":null,"is_privileged":false,"is_champion":false,"company":null,"avatar_url":null,"disabled":null,"players_count":1,"max_players_count":"10"}],"documents":[],"live_participates":[]}' 
+added reg 0 at 11:59:59 14 Dec
+job registration 0 entered at 11:59:59.550 14 Dec
+[TIME] before post 0
+[TIME] def requestPost entered 0
+POST REQUEST /players/applications 
+HEADERS
+Accept-Encoding = gzip, deflate, br
+User-Agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+Sec-Fetch-Site = same-site
+Referer = https://portal.mozgo.com /?
+Content-Length = 298
+X-User-Time-Offset = 10800
+Accept = application/json, text/plain, */*
+Content-Type = application/json;charset=UTF-8
+Connection = keep-alive
+Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg
+Sec-Fetch-Mode = cors
+Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Host = api.base.mozgo.com
+Origin = https://portal.mozgo.com
+[TIME] headers printed 0
+POST REQUEST BODY {'player_count': 6, 'team_id': 1006, 'play_for_first_time': False, 'captain_name': 'Fedor Smirnov', 'event_day_id': '27036109-bb45-4ac6-8cea-c9eacbdafa17', 'captain_phone': '+79066320069', 'captain_email': 'ahtirf@mail.ru', 'comment': '', 'roistat_first_visit': '331370', 'roistat_visit': '331370'} 
+[TIME] body printed 1
+[TIME] POST sent 67
+[TIME] before parsing response 67
+422 Unprocessable Entity
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:59:59 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 999
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma
+Set-Cookie: mozgo_session=eyJpdiI6IkY5S3RLa01KTTF2eE5TU0lzMFM3MFE9PSIsInZhbHVlIjoiUzBtVk44VjRsWlIyZ3VcL044TkNwRDBpME1CTWJcLzloZmVjOGxkV2x1aDd4bUJxWWxBclpETEVVUUZlcGtIWU85IiwibWFjIjoiN2E1ODE3ZjJkMTdlNzFiMWIyYjU5OWJlYzkwMDE5OWQ5MGNiNTYxOGMzODZjMzMyMmY4MzYzNjM5MWVmY2NiOSJ9; expires=Mon, 14-Dec-2020 10:59:59 GMT; Max-Age=7200; path=/; httponly
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'{"message":"The given data was invalid.","errors":{"event_day_id":["\\u0420\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0430\\u0446\\u0438\\u044f \\u043d\\u0430 \\u0434\\u0430\\u043d\\u043d\\u043e\\u0435 \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u0435 \\u0435\\u0449\\u0435 \\u043d\\u0435 \\u043d\\u0430\\u0447\\u0430\\u043b\\u0430\\u0441\\u044c!"]}}' 
+[TIME] after post exception 171
+Exception caught HTTP Code Unprocessable Entity
+retry after 0 seconds
+[TIME] after post cycle end 171
+[TIME] before post 171
+[TIME] def requestPost entered 171
+POST REQUEST /players/applications 
+HEADERS
+Accept-Encoding = gzip, deflate, br
+User-Agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+Sec-Fetch-Site = same-site
+Referer = https://portal.mozgo.com /?
+Content-Length = 298
+X-User-Time-Offset = 10800
+Accept = application/json, text/plain, */*
+Content-Type = application/json;charset=UTF-8
+Connection = keep-alive
+Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg
+Sec-Fetch-Mode = cors
+Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Host = api.base.mozgo.com
+Origin = https://portal.mozgo.com
+[TIME] headers printed 171
+POST REQUEST BODY {'player_count': 6, 'team_id': 1006, 'play_for_first_time': False, 'captain_name': 'Fedor Smirnov', 'event_day_id': '27036109-bb45-4ac6-8cea-c9eacbdafa17', 'captain_phone': '+79066320069', 'captain_email': 'ahtirf@mail.ru', 'comment': '', 'roistat_first_visit': '331370', 'roistat_visit': '331370'} 
+[TIME] body printed 171
+[TIME] POST sent 239
+[TIME] before parsing response 239
+422 Unprocessable Entity
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:59:59 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 998
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma
+Set-Cookie: mozgo_session=eyJpdiI6Ikg4RG53QjlLRURoTG1jNEI4VVpOVUE9PSIsInZhbHVlIjoiUzZjZkZtQWU3U3Y1Tk90QVc0RkRldWhLaFdJVnViYnRDZ3RnNTZ2YWxPcnE3ajhZTEpKSnkycVR6c0p1cm1reSIsIm1hYyI6ImQ2MzNhMzFjYzQyMjMzOTk4ZGI0NWRkNjZlNmI5Zjc4NDI2ZWU0NTZhODYwYzlhMzc2MDhhNjdjZDRjMzJhMzQifQ%3D%3D; expires=Mon, 14-Dec-2020 10:59:59 GMT; Max-Age=7200; path=/; httponly
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'{"message":"The given data was invalid.","errors":{"event_day_id":["\\u0420\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0430\\u0446\\u0438\\u044f \\u043d\\u0430 \\u0434\\u0430\\u043d\\u043d\\u043e\\u0435 \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u0435 \\u0435\\u0449\\u0435 \\u043d\\u0435 \\u043d\\u0430\\u0447\\u0430\\u043b\\u0430\\u0441\\u044c!"]}}' 
+[TIME] after post exception 341
+Exception caught HTTP Code Unprocessable Entity
+retry after 0 seconds
+[TIME] after post cycle end 341
+[TIME] before post 341
+[TIME] def requestPost entered 341
+POST REQUEST /players/applications 
+HEADERS
+Accept-Encoding = gzip, deflate, br
+User-Agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+Sec-Fetch-Site = same-site
+Referer = https://portal.mozgo.com /?
+Content-Length = 298
+X-User-Time-Offset = 10800
+Accept = application/json, text/plain, */*
+Content-Type = application/json;charset=UTF-8
+Connection = keep-alive
+Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg
+Sec-Fetch-Mode = cors
+Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Host = api.base.mozgo.com
+Origin = https://portal.mozgo.com
+[TIME] headers printed 341
+POST REQUEST BODY {'player_count': 6, 'team_id': 1006, 'play_for_first_time': False, 'captain_name': 'Fedor Smirnov', 'event_day_id': '27036109-bb45-4ac6-8cea-c9eacbdafa17', 'captain_phone': '+79066320069', 'captain_email': 'ahtirf@mail.ru', 'comment': '', 'roistat_first_visit': '331370', 'roistat_visit': '331370'} 
+[TIME] body printed 341
+[TIME] POST sent 407
+[TIME] before parsing response 407
+422 Unprocessable Entity
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:59:59 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 997
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma
+Set-Cookie: mozgo_session=eyJpdiI6IlZrMkd1VVBXV2RBeFpCcll2eXVhUXc9PSIsInZhbHVlIjoiR1wvdXcyWVZZUHJEYnZrYzRzMm1qTFlqYTh5cHM1a1VhTkk3WmsyTzhIUkRRUTA1YVBGVCtnRmxxYVF5Q0lHYTQiLCJtYWMiOiI5NDJmY2ViNDI2YWU2NGVmNDZhZGFjNGI1MWQ3NmE3NmE2YWY1MmMwYTlhNmVhNmYxZWZjZTk4ZThhMDgyZmZkIn0%3D; expires=Mon, 14-Dec-2020 10:59:59 GMT; Max-Age=7200; path=/; httponly
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'{"message":"The given data was invalid.","errors":{"event_day_id":["\\u0420\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0430\\u0446\\u0438\\u044f \\u043d\\u0430 \\u0434\\u0430\\u043d\\u043d\\u043e\\u0435 \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u0435 \\u0435\\u0449\\u0435 \\u043d\\u0435 \\u043d\\u0430\\u0447\\u0430\\u043b\\u0430\\u0441\\u044c!"]}}' 
+[TIME] after post exception 509
+Exception caught HTTP Code Unprocessable Entity
+retry after 0 seconds
+[TIME] after post cycle end 509
+[TIME] before post 509
+[TIME] def requestPost entered 509
+POST REQUEST /players/applications 
+HEADERS
+Accept-Encoding = gzip, deflate, br
+User-Agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+Sec-Fetch-Site = same-site
+Referer = https://portal.mozgo.com /?
+Content-Length = 298
+X-User-Time-Offset = 10800
+Accept = application/json, text/plain, */*
+Content-Type = application/json;charset=UTF-8
+Connection = keep-alive
+Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg
+Sec-Fetch-Mode = cors
+Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Host = api.base.mozgo.com
+Origin = https://portal.mozgo.com
+[TIME] headers printed 509
+POST REQUEST BODY {'player_count': 6, 'team_id': 1006, 'play_for_first_time': False, 'captain_name': 'Fedor Smirnov', 'event_day_id': '27036109-bb45-4ac6-8cea-c9eacbdafa17', 'captain_phone': '+79066320069', 'captain_email': 'ahtirf@mail.ru', 'comment': '', 'roistat_first_visit': '331370', 'roistat_visit': '331370'} 
+[TIME] body printed 509
+[TIME] POST sent 577
+[TIME] before parsing response 577
+422 Unprocessable Entity
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 08:59:59 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 996
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma
+Set-Cookie: mozgo_session=eyJpdiI6InRYQXUwMlA5U0xEeW85UW81TmdNZXc9PSIsInZhbHVlIjoiZ1FSYlk1eEtZTlVUYldvRTZKQkoxVVdsbDNKUEE3MmsySnJQM2drTFpMMkF2emdwQmVPMHROcEpCSTV1cGxkMCIsIm1hYyI6IjU3MWY3NGM4MTIzZmVkMDI3YjE3NDg1MDlhMGViM2UxNmM2YzcyMzNiMDRkNTE5YTUzZTkwMTY5OTNkOTI1MjIifQ%3D%3D; expires=Mon, 14-Dec-2020 10:59:59 GMT; Max-Age=7200; path=/; httponly
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'{"message":"The given data was invalid.","errors":{"event_day_id":["\\u0420\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0430\\u0446\\u0438\\u044f \\u043d\\u0430 \\u0434\\u0430\\u043d\\u043d\\u043e\\u0435 \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u0435 \\u0435\\u0449\\u0435 \\u043d\\u0435 \\u043d\\u0430\\u0447\\u0430\\u043b\\u0430\\u0441\\u044c!"]}}' 
+[TIME] after post exception 683
+Exception caught HTTP Code Unprocessable Entity
+retry after 0 seconds
+[TIME] after post cycle end 683
+[TIME] before post 683
+[TIME] def requestPost entered 683
+POST REQUEST /players/applications 
+HEADERS
+Accept-Encoding = gzip, deflate, br
+User-Agent = Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1147.52
+Sec-Fetch-Site = same-site
+Referer = https://portal.mozgo.com /?
+Content-Length = 298
+X-User-Time-Offset = 10800
+Accept = application/json, text/plain, */*
+Content-Type = application/json;charset=UTF-8
+Connection = keep-alive
+Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViMmYxZTEzNDAwNjYzN2JlODE3OTQxMjI5ZGM2OGM4ZTg0NTc4NTY4ZDVjMTg5MDM4MTk5M2Y5MDUxMTQ3ZWQxNTc5YmMzM2YxMGZkNGM4In0.eyJhdWQiOiIxIiwianRpIjoiNWIyZjFlMTM0MDA2NjM3YmU4MTc5NDEyMjlkYzY4YzhlODQ1Nzg1NjhkNWMxODkwMzgxOTkzZjkwNTExNDdlZDE1NzliYzMzZjEwZmQ0YzgiLCJpYXQiOjE2MDEwMTgyOTgsIm5iZiI6MTYwMTAxODI5OCwiZXhwIjoxNjMyNTU0Mjk4LCJzdWIiOiIxMjg5Iiwic2NvcGVzIjpbIioiXX0.jI3zBdLXB2eQYIhTcKsVE57ynz50Wla0GvqkcK4fk6hygukwhlHL40rmp4aIhhxj_I24Xaa-BXFZ4s0tYIeY6AWuDJkrl_BPkVUGIxyHhCSZzbEfaf2HaEsYs9Nhy5hHJZb9DbI7MYlHc0bBTs1GW5nl8Yl6DuF9KZzhTVCAaKSwsyo1XW_pD4ygL-v5xO_LA0nA5YecBftMsG6XOEjbmo-FeeCCE5_Jk6IJ5wZf3ZGFd3irTt3MdpfHj9hpIFVgBkaTM9Bgk3f1l3kMUDYyOkgiD0eh8baJ8i8KHRxoHgyZR100LgwzQJO_rcuug6ohXl72txoYQs4UVt_h8w5EDQdXnM06MA9wwoQeahZIg1A0gKiYxrKp9Ao9O8tRUwCsXlPlAmcvZpbSSguHONDCe8Sp-XOpsUpzYXrbB57WaLiTqg-Cmhx8NA9u6MvMWeJowj9gWBNVjo3ftS37w4o0t1m1vPVGUEmZyLtRwLJHneSHaiYDhK1E-U4AyZBYKh1zEjm829XKezX_OgxKUy4N0O4AOMuEZap9eUry2a3CEBE-fpsViBrwrReBOr26LpXmWHiwSxO9ZJ7aymmNHCWPGwkdquYjTDiNpERxfre7ytJUX6Xep1xDHT774Lfs74SAdfj4QzAqUDaSu38cqzXctclUH48cZgpQuedKAyJToyg
+Sec-Fetch-Mode = cors
+Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Host = api.base.mozgo.com
+Origin = https://portal.mozgo.com
+[TIME] headers printed 683
+POST REQUEST BODY {'player_count': 6, 'team_id': 1006, 'play_for_first_time': False, 'captain_name': 'Fedor Smirnov', 'event_day_id': '27036109-bb45-4ac6-8cea-c9eacbdafa17', 'captain_phone': '+79066320069', 'captain_email': 'ahtirf@mail.ru', 'comment': '', 'roistat_first_visit': '331370', 'roistat_visit': '331370'} 
+[TIME] body printed 683
+[TIME] POST sent 752
+[TIME] before parsing response 752
+201 Created
+RESPONSE HEADER Server: nginx/1.17.6
+Date: Mon, 14 Dec 2020 09:00:00 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.7
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 995
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma
+Set-Cookie: mozgo_session=eyJpdiI6ImlwUXREOXA1RVwvQVNzTXhudzJmbjlRPT0iLCJ2YWx1ZSI6InVsOVQ0VWdGU3BBUmhsUGlYQTNLYWYyVEtReVc5VGN3ZHBFZzd4cTJWRWs2ZW82N0YwWDNBdDJ2aCtXUDZCclYiLCJtYWMiOiJjMzFhMGI2YjAyNDAxZmQxMmI5YWQwMWU2Mzg4YTU5MTJjMDg3NjA5M2E0MWU2Njc1Njc0M2EwMWU3Y2E4NWJjIn0%3D; expires=Mon, 14-Dec-2020 11:00:00 GMT; Max-Age=7200; path=/; httponly
+Strict-Transport-Security: max-age=31536000
+
+ 
+RESPONSE BODY b'{"games_event_day_id":"27036109-bb45-4ac6-8cea-c9eacbdafa17","team_id":1006,"status":"active","player_count":6,"total_cost":180000,"paid_total":0,"comment":null,"play_for_first_time":false,"roistat":"331370","roistat_first":"331370","registered_at":"2020-12-14 09:00:00+0000","total_cost_in_pennies":180000,"user_id":1289,"portal_promocode_id":null,"updated_at":"2020-12-14 09:00:00+0000","created_at":"2020-12-14 09:00:00+0000","id":117647}' 
+[TIME] after post success 913
+2020-12-14 09:00:00+0000
+[TIME] after post cycle end 913
+
+Process finished with exit code 0
